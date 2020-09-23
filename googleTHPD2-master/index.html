@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="shortcut icon" href="https://www.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+  </head>
+  <body>
+    <div class="top-notif">
+      <div class="wrapper">
+        <a href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a> 
+      </div>
+      <div class="wrapper">
+        <a href="https://www.google.fr/imghp">images</a> 
+      </div>
+      <div class="ham"></div>
+      <div class="pp"></div>
+    </div>
+    <div class="container">
+      <div class="wrapper">
+        <div class="body">
+          <div class="brand">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="" id="logo">
+          </div>
+        </div>
+        <div class="search">
+          <div class="search-container">
+            <div class="input" id="input-container">
+              <div class="magnifying"></div>
+              <input type="text" id="input">
+              <div class="mic"></div>
+            </div>
+            <div class="btn-container">
+              <div class="btn-wrapper">
+                <div class="text">
+                  Recherche Google
+                </div>
+              </div>
+              <div class="btn-wrapper">
+                <div class="text">
+                  J'ai de la chance
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filler">
+          Google disponible en : <a href="">English</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="location">
+        France
+      </div>
+      <div class="container">
+        <div class="left">
+          <div class="wrapper">Publicité</div>
+          <div class="wrapper">Entreprise</div>
+          <div class="wrapper">À propos</div>
+          <div class="wrapper">Comment fonctionne la recherche Google ?</div>
+        </div>
+        <div class="right">
+          <div class="wrapper">Info consommateurs</div>
+          <div class="wrapper">Confidentialité</div>
+          <div class="wrapper">Conditions</div>
+          <div class="wrapper">Paramètres</div>
+        </div>
+      </div>
+    </div>
+    <div class="searches" id="searches">
+      <div class="line">
+
+      </div>
+      <div class="searchbox">
+        t'as vu comment ça tue?
+      </div>
+      <div class="searchbox">
+        c'est pas parfait
+      </div>
+      <div class="searchbox">
+        mais j'ai bien travaillé
+      </div>
+      <div class="searchbox">
+        et le tien, il ressemble à quoi?
+      </div>
+      <div class="searchbox">
+        MP le sur discord
+      </div>
+      <div class="searchbox">
+        @Boris Marion-Dorier ou @botro-
+      </div>
+      <div class="btn-container">
+        <div class="btn-wrapper">
+          <div class="text">
+            Recherche Google
+          </div>
+        </div>
+        <div class="btn-wrapper">
+          <div class="text">
+            J'ai de la chance
+          </div>
+        </div>
+      </div>
+      <div class="know-more">
+        <a href="">En savoir plus</a>
+      </div>
+    </div>
+    <script>
+      let input = document.getElementById("input");
+      let container = document.getElementById("input-container");
+      let searches = document.getElementById("searches");
+      let blur = function(e){
+        container.classList.remove("active");
+        container.style.borderBottom = "solid rgba(194, 194, 194,0.8) 1px";
+        container.style.webkitBorderBottomLeftRadius = "2.2em";
+        container.style.webkitBorderBottomRightRadius = "2.2em";
+        container.style.webkitBorderTopLeftRadius = "2.2em";
+        container.style.webkitBorderTopRightRadius = "2.2em";
+        searches.style.display = "none";
+        input.removeEventListener("blur", blur);
+      }
+      let focus = function(e){
+        container.style.borderBottom = "none";
+        container.classList.add("active");
+        container.style.webkitBorderBottomLeftRadius = "0px";
+        container.style.webkitBorderBottomRightRadius = "0px";
+        container.style.webkitBorderTopLeftRadius = "1.1em";
+        container.style.webkitBorderTopRightRadius = "1.1em";
+        searches.style.display = "block";
+        searches.style.top = container.getBoundingClientRect().bottom + "px";
+        searches.style.left = container.getBoundingClientRect().left + 1  + "px";
+        input.addEventListener("blur", blur)
+      }
+      input.addEventListener("focus", focus);
+    </script>
+  </body>
+</html>

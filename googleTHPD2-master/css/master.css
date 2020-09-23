@@ -1,0 +1,337 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper{
+  padding-bottom: 35px;
+}
+
+.body{
+  margin: 0 auto;
+  min-width: 40px;
+}
+
+.body .brand{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.body .brand img{
+  height: 9vh;
+}
+
+.search{
+  width: 100%;
+}
+
+.search-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn-container{
+  margin: 1.5em;
+}
+
+.btn-container .btn-wrapper{
+  color: #5F6368;
+  background-color: #F7F7F7;
+  background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+  border-radius: 4px;
+  height: 36px;
+  padding: 0 16px;
+  margin: 0px 4px;
+  font-size: 14px;
+  display: inline-block;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.btn-container .btn-wrapper:hover{
+  background: linear-gradient(329deg, rgba(235,235,235,1) 0%, rgba(247,247,247,1) 50%, rgba(235,235,235,1) 100%);
+  margin: 0px 3px;
+  border: solid rgba(194, 194, 194,0.8) 1px;
+}
+
+.wrapper .filler{
+  width: 100%;
+  height: 27vh;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 0.9em;
+}
+
+.btn-wrapper .text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.search-container .input{
+  height: 2.2em;
+  width: 582px;
+  border-radius: 2.2em;
+  display: grid;
+  grid-template-columns: 8% 84% 8%;
+  border: solid rgba(194, 194, 194,0.8) 1px;
+}
+
+.search-container .input:hover{
+  box-shadow:
+0 0px 0.3px rgba(0, 0, 0, 0.034),
+0 0px 0.8px rgba(0, 0, 0, 0.048),
+0 0px 1.5px rgba(0, 0, 0, 0.06),
+0 0px 2.7px rgba(0, 0, 0, 0.072),
+0 0px 5px rgba(0, 0, 0, 0.086),
+0 0px 12px rgba(0, 0, 0, 0.12)
+;
+}
+
+.input .magnifying{
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Google_Magnifying_Glass.svg/1200px-Google_Magnifying_Glass.svg.png);
+  background-size: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 60%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.input .mic{
+  background-image: url(https://i.pinimg.com/originals/ea/5f/5b/ea5f5bd3b4110f2afb958049b4096d3a.png);
+  background-size: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.input input{
+  border: none;
+  font: 16px arial,sans-serif;
+}
+
+.input input:focus{
+  outline: none;
+}
+
+input:focus + .input{
+  background: red;
+}
+
+.top-notif{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  margin-right: 2em;
+  width: auto;
+  display: flex;
+  font-size: 0.8em;
+}
+
+.top-notif .wrapper{
+  margin: 0.5em;
+  display: inline;
+  cursor: pointer;
+}
+
+.top-notif .wrapper a{
+  text-decoration: unset;
+  color: black;
+}
+
+.top-notif .pp{
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-image: url(https://media1.tenor.com/images/ae6a291f432d71839ae9f703a8fd6b27/tenor.gif?itemid=10121945);
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.top-notif .ham{
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background-image: url(../ressources/ham.PNG);
+  background-size: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-right: 0.5em;
+}
+
+.footer{
+  box-sizing: border-box;
+  border-top: solid #e4e4e4 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f2f2f2;
+  font-size: 15px;
+  color: rgba(0,0,0,.54);
+  font-size: 15px;
+}
+
+.footer .location{
+  margin: 0 30px;
+  padding: 12px 0;
+}
+
+
+.footer .container{
+  border-top: solid #e4e4e4 1px;
+  font-size: 14px;
+}
+
+.container .left{
+  display: inline-block;
+  width: 50%;
+  min-width: fit-content;
+  margin: 0 30px;
+  padding:  12px 0;
+  position: relative;
+  left: 0;
+}
+.container .right{
+  display: inline-block;
+  width: 50%;
+  min-width: fit-content;
+  margin: 0 30px;
+  position: relative;
+  right: 0;
+  text-align: right;
+}
+
+.left .wrapper{
+  padding: 0;
+  display: inline-block;
+  padding-right: 27px;
+  cursor: pointer;
+}
+.left .wrapper:hover{
+  text-decoration: underline;
+}
+.right .wrapper{
+  padding: 0;
+  display: inline-block;
+  padding-left: 27px;
+  cursor: pointer;
+}
+.right .wrapper:hover{
+  text-decoration: underline;
+}
+
+.line{
+  display: block;
+  width: 92%;
+  height: 1px;
+  border-top: solid #e4e4e4 1px;
+  margin: 0 auto;
+}
+
+.searches{
+  width: 582px;
+  border-bottom-left-radius: 1.1em;
+  border-bottom-right-radius: 1.1em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-height: 10em;
+  border: solid rgba(194, 194, 194,0.8) 1px;
+  border-top: none;
+  box-sizing: content-box;
+  transform: translateX(-1px);
+  display: none;
+  background: white;
+    box-shadow:
+  0 0.3px 0.3px rgba(0, 0, 0, 0.034),
+  0 0.8px 0.8px rgba(0, 0, 0, 0.048),
+  0 1.5px 1.5px rgba(0, 0, 0, 0.06),
+  0 2.7px 2.7px rgba(0, 0, 0, 0.072),
+  0 5px 5px rgba(0, 0, 0, 0.086),
+  0 12px 12px rgba(0, 0, 0, 0.12)
+  ;
+}
+
+.searches .btn-container{
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.know-more{
+  width: 100%;
+  text-align: right;
+  font-size: 0.6em;
+  margin: 0 16px 5px -25px;
+}
+
+.searchbox{
+  height: 2em;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  font-weight: lighter;
+  font-size: 0.9em;
+  color: #791e79
+}
+
+.searchbox::before{
+  display: inline-block;
+  content: "";
+  background-image: url(https://freeiconshop.com/wp-content/uploads/edd/clock-outline.png);
+  background-size: 45%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 60%;
+  height: 2em;
+  width: 2em;
+  margin-right: 0.3em;
+}
+
+.searchbox::after{
+  font-size: 0.8em;
+  content: "supprimer";
+  position: absolute;
+  right: 0px;
+  margin-right: 1em;
+  color: #80868b;
+  cursor: pointer;
+}
+.searchbox::after :hover{
+  color: blueviolet;
+}
+
+.searchbox:hover{
+  background-color: #EEEEEE;
+}
+
+.active{
+    box-shadow:
+  0 0px 0.3px rgba(0, 0, 0, 0.034),
+  0 0px 0.8px rgba(0, 0, 0, 0.048),
+  0 0px 1.5px rgba(0, 0, 0, 0.06),
+  0 0px 2.7px rgba(0, 0, 0, 0.072),
+  0 0px 5px rgba(0, 0, 0, 0.086),
+  0 0px 12px rgba(0, 0, 0, 0.12)
+  ;
+}
